@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Estudos GitFind
+## Descrição
+`GitFind` é uma aplicação web desenvolvida com React que permite ao usuário pesquisar informações de perfil e repositórios públicos de qualquer usuário do GitHub. A interface recebe o nome de usuário do GitHub e, ao clicar em "Buscar", exibe as informações do perfil e lista os repositórios públicos do usuário.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Tecnologias
+- **React**: Biblioteca para criação de interfaces de usuário.
+- **Fetch API**: Para chamadas HTTP à API pública do GitHub.
+- **React Hooks**: useState para gerenciamento de estados no componente.
 
-## Available Scripts
+### Estrutura do Projeto
 
-In the project directory, you can run:
+```
+src
+├───assets                    - Contém imagens e outros arquivos de mídia.
+├───components                - Componentes reutilizáveis.
+│   ├───Header                - Componente de cabeçalho.
+│   │   ├───Header.js         - Arquivo do componente Header.
+│   │   └───styles.css        - Estilos específicos do Header.
+│   └───ItemList              - Componente para exibir os repositórios.
+│       ├───ItemList.js       - Arquivo do componente ItemList.
+│       └───styles.css        - Estilos específicos do ItemList.
+└───pages                     - Páginas da aplicação.
+    └───Home                  - Página principal da aplicação.
+        ├───Home.js           - Arquivo da página Home.
+        └───styles.css        - Estilos específicos da Home.
+```
 
-### `npm start`
+### Descrição dos Arquivos
+- `assets`/: Diretório para armazenar a imagem.
+- `components`/: Diretório para os componentes reutilizáveis da aplicação, Header e ItemList.
+- `Header`: Contém o componente de cabeçalho com seu arquivo de estilo.
+- `ItemList`: Contém o componente para exibição dos repositórios e seus estilos.
+- `pages`/: Diretório para as páginas principais da aplicação.
+- `Home`: Página inicial que contém a lógica de busca e exibição de dados do GitHub.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Funcionalidades
+**Busca de Usuário**: Permite buscar um usuário GitHub pelo nome de usuário.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Exibição de Perfil**: Mostra a imagem, nome e biografia do usuário.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Lista de Repositórios**: Exibe uma lista de repositórios públicos do usuário, com o título e descrição.
